@@ -1,0 +1,137 @@
+.sidenav {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #c2c2c2;
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    overflow: auto;
+}
+
+.CreateCardEmployer {
+    padding-top: 50px;
+}
+
+.search {
+    padding-bottom: 10px;
+}
+
+.navPages {
+    margin: 15px;
+}
+
+.Bar {
+    padding: 10px;
+}
+
+.btn-side {
+    width: 170px;
+    height: 80px;
+
+    border-radius: 10px;
+    cursor: pointer;
+    line-height: 1.5;
+    font: 700 1.2rem 'Roboto Slab', sans-serif;
+
+    letter-spacing: 0.05rem;
+}
+
+
+
+.sidenav a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+
+
+
+.sidenav p {
+    display: block;
+    color: black;
+    margin-top: 100px;
+    padding: 16px;
+    font-size: 50px;
+
+}
+
+
+@media screen and (max-width: 700px) {
+    .sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .CreateCardEmployer {
+        padding-top: 0px;
+    }
+
+    .btn-side {
+        width: 100px;
+        height: 50px;
+
+        border-radius: 10px;
+        cursor: pointer;
+        line-height: 1.5;
+        font: 700 1.2rem 'Roboto Slab', sans-serif;
+
+        letter-spacing: 0.05rem;
+    }
+
+
+
+
+    .text-createdCard {
+        font-size: 12px;
+    }
+
+
+    .sidenav a {
+        float: center;
+    }
+
+    .sidenav p {
+        display: flex;
+        justify-content: center;
+        float: center;
+        color: red;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+
+    .navPages {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .sidenav a {
+        text-align: center;
+        float: none;
+    }
+}
+
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+        height: 200px;
+        width: 120px;
+    }
+
+    .sidenav a {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,50 @@
+1.function lookup(obj, path){
+  let paths = path.split('.')
+  let value = obj;
+  
+  try {
+   for (let i = 0; i < paths.length; i++) {
+      if (value[paths[i]] === undefined) {
+        throw "There is no spec path"
+      } else {
+        value = value[paths[i]];
+      }
+    }
+    
+    return value;
+  }
+  catch(error) {
+    return error;
+  }
+}
+
+object = { property1: { property2: "Apple", property3:'Orange' } }
+path = 'property1.property2'
+console.log(lookup(object, path))
+
+
+
+2.
+
+const getNext = (items) => {
+    items = items.sort((a,b) => {
+        if(a == b) return 0;
+        return a < b ? -1 : 1;
+    });
+
+    let hasTwice = false;
+    const itemsCounter = {};
+
+    for(let i = 0; i < items.length; i++) {
+        let item = items[i];
+        if(!itemsCounter[item.value]) itemsCounter[item.value] = 0;
+        itemsCounter[item.value]++;
+        if(itemsCounter[item.value] >= 2) {
+            hasTwice = true;
+        }
+        const lastItem = i > 1 ? items[i -1] : undefined;
+        if(hasTwice && lastItem && item.value - lastItem.value >= 2) {
+            return {id: items.length + 1, value: lastItem.value + 1};
+        }
+    }
+}
